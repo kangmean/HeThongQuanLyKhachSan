@@ -141,7 +141,7 @@ public class FormDangNhap extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                          .addComponent(btDangKyTK)
                          .addComponent(btDoiMatKhau))
-                    .addContainerGap(85, Short.MAX_VALUE))
+                    .addContainerGap(64, Short.MAX_VALUE))
           );
 
           pack();
