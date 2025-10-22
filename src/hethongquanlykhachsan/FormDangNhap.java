@@ -10,11 +10,12 @@ import javax.swing.*;
 
 public class FormDangNhap extends javax.swing.JFrame {
 
-     /**
-      * Creates new form FormDangNhap
-      */
+     private javax.swing.JButton btDangKy;
+     private javax.swing.JButton btQuenMatKhau;
+
      public FormDangNhap() {
           initComponents();
+          
      }
 
      /**
@@ -31,6 +32,8 @@ public class FormDangNhap extends javax.swing.JFrame {
           btDangNhap = new javax.swing.JButton();
           btThoat = new javax.swing.JButton();
           JMatKhau = new javax.swing.JPasswordField();
+          btDangKyTK = new javax.swing.JButton();
+          btDoiMatKhau = new javax.swing.JButton();
 
           setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
           setPreferredSize(new java.awt.Dimension(1000, 400));
@@ -66,6 +69,28 @@ public class FormDangNhap extends javax.swing.JFrame {
                }
           });
 
+          JMatKhau.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    JMatKhauActionPerformed(evt);
+               }
+          });
+
+          btDangKyTK.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+          btDangKyTK.setText("Tạo Tài Khoản");
+          btDangKyTK.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btDangKyTKActionPerformed(evt);
+               }
+          });
+
+          btDoiMatKhau.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+          btDoiMatKhau.setText("Quên Mật Khẩu");
+          btDoiMatKhau.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btDoiMatKhauActionPerformed(evt);
+               }
+          });
+
           javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
           getContentPane().setLayout(layout);
           layout.setHorizontalGroup(
@@ -73,21 +98,26 @@ public class FormDangNhap extends javax.swing.JFrame {
                .addGroup(layout.createSequentialGroup()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                          .addGroup(layout.createSequentialGroup()
+                              .addGap(203, 203, 203)
+                              .addComponent(jLabel3))
+                         .addGroup(layout.createSequentialGroup()
                               .addGap(92, 92, 92)
                               .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                    .addComponent(jLabel1)
                                    .addComponent(jLabel2))
                               .addGap(18, 18, 18)
-                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                             .addComponent(btDangNhap)
+                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                                             .addComponent(btThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtTenDangNhap)
+                                        .addComponent(JMatKhau))
                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btDangNhap)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                        .addComponent(btThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                   .addComponent(txtTenDangNhap)
-                                   .addComponent(JMatKhau)))
-                         .addGroup(layout.createSequentialGroup()
-                              .addGap(203, 203, 203)
-                              .addComponent(jLabel3)))
+                                        .addComponent(btDangKyTK)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(btDoiMatKhau)))))
                     .addContainerGap(204, Short.MAX_VALUE))
           );
           layout.setVerticalGroup(
@@ -107,7 +137,11 @@ public class FormDangNhap extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                          .addComponent(btDangNhap)
                          .addComponent(btThoat))
-                    .addContainerGap(150, Short.MAX_VALUE))
+                    .addGap(28, 28, 28)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                         .addComponent(btDangKyTK)
+                         .addComponent(btDoiMatKhau))
+                    .addContainerGap(85, Short.MAX_VALUE))
           );
 
           pack();
@@ -156,6 +190,24 @@ public class FormDangNhap extends javax.swing.JFrame {
           System.exit(0);
      }//GEN-LAST:event_btThoatActionPerformed
 
+     private void JMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMatKhauActionPerformed
+          // TODO add your handling code here:
+     }//GEN-LAST:event_JMatKhauActionPerformed
+
+     private void btDangKyTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDangKyTKActionPerformed
+          FormDangKy frmDangKy = new FormDangKy();
+          frmDangKy.setLocationRelativeTo(this);
+          frmDangKy.setVisible(true);
+          this.setVisible(false);
+     }//GEN-LAST:event_btDangKyTKActionPerformed
+
+     private void btDoiMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDoiMatKhauActionPerformed
+          FormQuenMatKhau frmQuenMatKhau = new FormQuenMatKhau();
+          frmQuenMatKhau.setLocationRelativeTo(this);
+          frmQuenMatKhau.setVisible(true);
+          this.setVisible(false);
+     }//GEN-LAST:event_btDoiMatKhauActionPerformed
+
      /**
       * @param args the command line arguments
       */
@@ -185,7 +237,7 @@ public class FormDangNhap extends javax.swing.JFrame {
 
           /* Create and display the form */
           java.awt.EventQueue.invokeLater(new Runnable() {
-               public void run() {
+               public void run(){
                     new FormDangNhap().setVisible(true);
                }
           });
@@ -193,7 +245,9 @@ public class FormDangNhap extends javax.swing.JFrame {
 
      // Variables declaration - do not modify//GEN-BEGIN:variables
      private javax.swing.JPasswordField JMatKhau;
+     private javax.swing.JButton btDangKyTK;
      private javax.swing.JButton btDangNhap;
+     private javax.swing.JButton btDoiMatKhau;
      private javax.swing.JButton btThoat;
      private javax.swing.JLabel jLabel1;
      private javax.swing.JLabel jLabel2;
