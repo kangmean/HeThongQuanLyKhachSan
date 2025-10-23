@@ -294,17 +294,66 @@ public class FormDatPhong extends javax.swing.JFrame {
      }// </editor-fold>//GEN-END:initComponents
 
      private void tblDatPhongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDatPhongMouseClicked
-          int selectedRow = tblDatPhong.getSelectedRow();
-          if(selectedRow >= 0) {
-               DefaultTableModel model = (DefaultTableModel) tblDatPhong.getModel();
-               txtMaDatPhong.setText(model.getValueAt(selectedRow, 0).toString());
-               txtMaKhachHang.setText(model.getValueAt(selectedRow, 1).toString());
-               txtMaPhong.setText(model.getValueAt(selectedRow, 2).toString());
-               txtNgayDat.setText(model.getValueAt(selectedRow, 3).toString());
-               cboTrangThai.setSelectedItem(model.getValueAt(selectedRow, 4).toString());
-               txtNgayNhan.setText(model.getValueAt(selectedRow, 5).toString());
-               txtNgayTra.setText(model.getValueAt(selectedRow, 6).toString());
-          }
+           try {
+        int row = tblDatPhong.getSelectedRow();
+        if (row >= 0) {
+            // XỬ LÝ NULL POINTER EXCEPTION - KIỂM TRA NULL TRƯỚC KHI LẤY GIÁ TRỊ
+            Object maDatPhongObj = tblDatPhong.getValueAt(row, 0);
+            Object maKHObj = tblDatPhong.getValueAt(row, 1);
+            Object maPhongObj = tblDatPhong.getValueAt(row, 2);
+            Object ngayDatObj = tblDatPhong.getValueAt(row, 3);
+            Object ngayNhanObj = tblDatPhong.getValueAt(row, 4);
+            Object ngayTraObj = tblDatPhong.getValueAt(row, 5);
+            Object trangThaiObj = tblDatPhong.getValueAt(row, 6);
+            
+            // Xử lý mã đặt phòng
+            if (maDatPhongObj != null) {
+                txtMaDatPhong.setText(maDatPhongObj.toString());
+            } else {
+                txtMaDatPhong.setText("");
+            }
+            
+            // Xử lý mã khách hàng
+            if (maKHObj != null) {
+                txtMaKhachHang.setText(maKHObj.toString());
+            } else {
+                txtMaKhachHang.setText("");
+            }
+            
+            // Xử lý mã phòng
+            if (maPhongObj != null) {
+                txtMaPhong.setText(maPhongObj.toString());
+            } else {
+                txtMaPhong.setText("");
+            }
+            
+            // Xử lý ngày đặt
+            if (ngayDatObj != null) {
+                // Giả sử bạn có JDateChooser hoặc JTextField cho ngày
+                // txtNgayDat.setText(ngayDatObj.toString());
+            }
+            
+            // Xử lý ngày nhận
+            if (ngayNhanObj != null) {
+                // txtNgayNhan.setText(ngayNhanObj.toString());
+            }
+            
+            // Xử lý ngày trả
+            if (ngayTraObj != null) {
+                // txtNgayTra.setText(ngayTraObj.toString());
+            }
+            
+            // Xử lý trạng thái
+            if (trangThaiObj != null) {
+                cboTrangThai.setSelectedItem(trangThaiObj.toString());
+            } else {
+                cboTrangThai.setSelectedIndex(0);
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Lỗi khi chọn đặt phòng: " + e.getMessage());
+    }
      }//GEN-LAST:event_tblDatPhongMouseClicked
 
      private void btXoaTrangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btXoaTrangActionPerformed

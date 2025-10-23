@@ -25,21 +25,158 @@ public class FormMain extends javax.swing.JFrame {
      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
      private void initComponents() {
 
+          jLabel15 = new javax.swing.JLabel();
+          jLabel16 = new javax.swing.JLabel();
+          jLabel17 = new javax.swing.JLabel();
+          jLabel18 = new javax.swing.JLabel();
+          jLabel19 = new javax.swing.JLabel();
+          btXemKhach = new javax.swing.JButton();
+          btDatPhong = new javax.swing.JButton();
+          btQuanLyPhong = new javax.swing.JButton();
+          btThoat = new javax.swing.JButton();
+          btXemHoaDon = new javax.swing.JButton();
+
           setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+          jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+          jLabel15.setText("Các Chức Năng");
+
+          jLabel16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+          jLabel16.setText("Đặt Phòng");
+
+          jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+          jLabel17.setText("Xem Khách");
+
+          jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+          jLabel18.setText("Xem Hóa Đơn");
+
+          jLabel19.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+          jLabel19.setText("Quản Lý Phòng");
+
+          btXemKhach.setText("Truy Cập");
+          btXemKhach.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btXemKhachActionPerformed(evt);
+               }
+          });
+
+          btDatPhong.setText("Truy Cập");
+          btDatPhong.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btDatPhongActionPerformed(evt);
+               }
+          });
+
+          btQuanLyPhong.setText("Truy Cập");
+          btQuanLyPhong.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btQuanLyPhongActionPerformed(evt);
+               }
+          });
+
+          btThoat.setText("Thoát");
+          btThoat.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btThoatActionPerformed(evt);
+               }
+          });
+
+          btXemHoaDon.setText("Truy Cập");
+          btXemHoaDon.addActionListener(new java.awt.event.ActionListener() {
+               public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btXemHoaDonActionPerformed(evt);
+               }
+          });
 
           javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
           getContentPane().setLayout(layout);
           layout.setHorizontalGroup(
                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGap(0, 400, Short.MAX_VALUE)
+               .addGroup(layout.createSequentialGroup()
+                    .addGap(156, 156, 156)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                         .addComponent(jLabel19)
+                         .addComponent(jLabel16)
+                         .addComponent(jLabel18)
+                         .addComponent(jLabel17))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                         .addGroup(layout.createSequentialGroup()
+                              .addGap(73, 73, 73)
+                              .addComponent(jLabel15))
+                         .addGroup(layout.createSequentialGroup()
+                              .addGap(52, 52, 52)
+                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                   .addComponent(btDatPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                   .addComponent(btXemKhach, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                   .addComponent(btQuanLyPhong, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                   .addComponent(btXemHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addGap(117, 117, 117)
+                              .addComponent(btThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(237, Short.MAX_VALUE))
           );
           layout.setVerticalGroup(
                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-               .addGap(0, 300, Short.MAX_VALUE)
+               .addGroup(layout.createSequentialGroup()
+                    .addGap(89, 89, 89)
+                    .addComponent(jLabel15)
+                    .addGap(40, 40, 40)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                         .addComponent(jLabel17)
+                         .addComponent(btThoat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                         .addComponent(btXemKhach, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGap(26, 26, 26)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                         .addComponent(jLabel18)
+                         .addComponent(btXemHoaDon))
+                    .addGap(28, 28, 28)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                         .addComponent(jLabel16)
+                         .addComponent(btDatPhong))
+                    .addGap(36, 36, 36)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                         .addComponent(jLabel19)
+                         .addComponent(btQuanLyPhong))
+                    .addContainerGap(169, Short.MAX_VALUE))
           );
 
           pack();
      }// </editor-fold>//GEN-END:initComponents
+
+     private void btXemKhachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btXemKhachActionPerformed
+          FormKhachHang formKhach = new FormKhachHang();
+          formKhach.setVisible(true);
+          formKhach.setLocationRelativeTo(null);
+     }//GEN-LAST:event_btXemKhachActionPerformed
+
+     private void btDatPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDatPhongActionPerformed
+           FormDatPhong formDatPhong = new FormDatPhong();
+          formDatPhong.setVisible(true);
+          formDatPhong.setLocationRelativeTo(null);
+     }//GEN-LAST:event_btDatPhongActionPerformed
+
+     private void btQuanLyPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btQuanLyPhongActionPerformed
+          FormQuanLyPhong formPhong = new FormQuanLyPhong();
+          formPhong.setVisible(true);
+          formPhong.setLocationRelativeTo(null);
+     }//GEN-LAST:event_btQuanLyPhongActionPerformed
+
+     private void btThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThoatActionPerformed
+          int confirm = javax.swing.JOptionPane.showConfirmDialog(
+               this, 
+               "Bạn có chắc chắn muốn thoát?", 
+               "Xác nhận thoát", 
+               javax.swing.JOptionPane.YES_NO_OPTION
+          );
+          if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+               System.exit(0);
+          }
+     }//GEN-LAST:event_btThoatActionPerformed
+
+     private void btXemHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btXemHoaDonActionPerformed
+          FormHoaDon formHoaDon = new FormHoaDon();
+          formHoaDon.setVisible(true);
+          formHoaDon.setLocationRelativeTo(null);
+     }//GEN-LAST:event_btXemHoaDonActionPerformed
 
      /**
       * @param args the command line arguments
@@ -77,5 +214,15 @@ public class FormMain extends javax.swing.JFrame {
      }
 
      // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JButton btDatPhong;
+     private javax.swing.JButton btQuanLyPhong;
+     private javax.swing.JButton btThoat;
+     private javax.swing.JButton btXemHoaDon;
+     private javax.swing.JButton btXemKhach;
+     private javax.swing.JLabel jLabel15;
+     private javax.swing.JLabel jLabel16;
+     private javax.swing.JLabel jLabel17;
+     private javax.swing.JLabel jLabel18;
+     private javax.swing.JLabel jLabel19;
      // End of variables declaration//GEN-END:variables
 }
